@@ -1,0 +1,114 @@
+DEFINE_MOLECULES
+{
+  glutamate
+  {
+    DIFFUSION_CONSTANT_3D = 3e-6
+    CUSTOM_TIME_STEP = 1e-9
+  }
+  AMPAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  D
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NMDAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NND1
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NND2
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNRf
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNRs
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+    TARGET_ONLY
+  }
+  EEATGlut
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  EEAT
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+}
+

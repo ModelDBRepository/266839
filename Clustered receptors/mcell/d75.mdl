@@ -1,0 +1,81 @@
+CHECKPOINT_INFILE = "chkpts1"
+CHECKPOINT_OUTFILE = "chkpts1"
+CHECKPOINT_ITERATIONS = 50
+ITERATIONS = 2000000
+TIME_STEP = 2e-7
+VACANCY_SEARCH_DISTANCE = 10
+
+INCLUDE_FILE = "Scene.initialization.mdl"
+
+PARTITION_X = [[-0.150999993085861 TO 0.150999993085861 STEP 0.0199999995529652]]
+PARTITION_Y = [[-0.150999993085861 TO 0.150999993085861 STEP 0.0199999995529652]]
+PARTITION_Z = [[-0.865317583084106 TO 0.0124999992549419 STEP 0.0199999995529652]]
+
+INCLUDE_FILE = "Scene.molecules.mdl"
+
+INCLUDE_FILE = "Scene.surface_classes.mdl"
+
+INCLUDE_FILE = "Scene.reactions.mdl"
+
+INCLUDE_FILE = "Scene.geod75.mdl"
+
+INCLUDE_FILE = "Scene.mod_surf_regions.mdl"
+
+INSTANTIATE Scene OBJECT
+{
+  cleft OBJECT cleft {}
+  glut_det1 OBJECT glut_det1 {}
+  glut_det2 OBJECT glut_det2 {}
+  postsynaptic OBJECT postsynaptic {}
+  presynaptic OBJECT presynaptic {}
+  Glut_release RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0.05, -0.05, 0]
+   SITE_DIAMETER = 0.005
+   MOLECULE = glutamate
+   NUMBER_TO_RELEASE = 1500
+   RELEASE_PROBABILITY = 1
+  }
+  uptake_site RELEASE_SITE
+  {
+   SHAPE = Scene.presynaptic[uptake_region]
+   MOLECULE = EEAT,
+   NUMBER_TO_RELEASE = 1000
+   RELEASE_PROBABILITY = 1
+  }
+  AMPAR_release_cluster RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[release_cluster]
+   MOLECULE = AMPAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+  NMDAR_release_cluster RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[release_cluster]
+   MOLECULE = NMDAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+  AMPA_non_release_cluster RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[non_release_cluster]
+   MOLECULE = AMPAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+  NMDAR_non_release_cluster RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[non_release_cluster]
+   MOLECULE = NMDAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+}
+
+sprintf(seed,"%05g",SEED)
+
+INCLUDE_FILE = "Scene.viz_output.mdl"
+
+INCLUDE_FILE = "Scene.rxn_output.mdl"

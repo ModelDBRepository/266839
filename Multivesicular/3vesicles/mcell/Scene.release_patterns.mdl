@@ -1,0 +1,6 @@
+DEFINE_RELEASE_PATTERN glut_pattern
+{
+  DELAY = 0.01
+  NUMBER_OF_TRAINS = 1
+}
+

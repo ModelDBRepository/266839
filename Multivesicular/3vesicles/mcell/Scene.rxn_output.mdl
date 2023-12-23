@@ -1,0 +1,10 @@
+REACTION_DATA_OUTPUT
+{
+  STEP=2e-7
+  {COUNT[glutamate,Scene.cleft]}=> "./react_data/seed_" & seed & "/glutamate.cleft.dat"
+  {COUNT[AAAARO,WORLD]}=> "./react_data/seed_" & seed & "/AAAARO.World.dat"
+  {COUNT[AAARO,WORLD]}=> "./react_data/seed_" & seed & "/AAARO.World.dat"
+  {COUNT[AARO,WORLD]}=> "./react_data/seed_" & seed & "/AARO.World.dat"
+  {COUNT[NNO,WORLD]}=> "./react_data/seed_" & seed & "/NNO.World.dat"
+}
+

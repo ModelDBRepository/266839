@@ -1,0 +1,17 @@
+REACTION_DATA_OUTPUT
+{
+  OUTPUT_BUFFER_SIZE=1000
+  STEP=2e-7
+  {COUNT[glutamate,Scene.cleft]}=> "./react_data/seed_" & seed & "/glutamate.cleft.dat"
+  {COUNT[glutamate,Scene.glut_det1]}=> "./react_data/seed_" & seed & "/glutamate.glut_det1.dat"
+  {COUNT[glutamate,Scene.glut_det2]}=> "./react_data/seed_" & seed & "/glutamate.glut_det2.dat"
+  {COUNT[AARO,Scene.postsynaptic[release_cluster]]}=> "./react_data/seed_" & seed & "/AARO.postsynaptic.release_cluster.dat"
+  {COUNT[AAARO,Scene.postsynaptic[release_cluster]]}=> "./react_data/seed_" & seed & "/AAARO.postsynaptic.release_cluster.dat"
+  {COUNT[AAAARO,Scene.postsynaptic[release_cluster]]}=> "./react_data/seed_" & seed & "/AAAARO.postsynaptic.release_cluster.dat"
+  {COUNT[AARO,Scene.postsynaptic[non_release_cluster]]}=> "./react_data/seed_" & seed & "/AARO.postsynaptic.non_release_cluster.dat"
+  {COUNT[AAARO,Scene.postsynaptic[non_release_cluster]]}=> "./react_data/seed_" & seed & "/AAARO.postsynaptic.non_release_cluster.dat"
+  {COUNT[AAAARO,Scene.postsynaptic[non_release_cluster]]}=> "./react_data/seed_" & seed & "/AAAARO.postsynaptic.non_release_cluster.dat"
+  {COUNT[NNO,Scene.postsynaptic[release_cluster]]}=> "./react_data/seed_" & seed & "/NNO.postsynaptic.release_cluster.dat"
+  {COUNT[NNO,Scene.postsynaptic[non_release_cluster]]}=> "./react_data/seed_" & seed & "/NNO.postsynaptic.non_release_cluster.dat"
+}
+

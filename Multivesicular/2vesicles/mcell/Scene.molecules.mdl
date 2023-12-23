@@ -1,0 +1,194 @@
+DEFINE_MOLECULES
+{
+  glutamate
+  {
+    DIFFUSION_CONSTANT_3D = 3e-6
+    CUSTOM_SPACE_STEP = 0.0004
+    TARGET_ONLY
+  }
+  AMPAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAARO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  D
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  AAAADD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  EEAT
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  EEATGlut
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NMDAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NND1
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NND2
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNRf
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNRs
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  NNO
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  kyn
+  {
+    DIFFUSION_CONSTANT_3D = 3e-6
+  }
+  KR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKAAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKKR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKKAR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKKKR
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKKD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKKAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KKAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+  KAAAD
+  {
+    DIFFUSION_CONSTANT_2D = 0
+  }
+}
+

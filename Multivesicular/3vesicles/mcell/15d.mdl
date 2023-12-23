@@ -1,0 +1,96 @@
+CHECKPOINT_INFILE = "chkpts1"
+CHECKPOINT_OUTFILE = "chkpts1"
+CHECKPOINT_ITERATIONS = 10
+ITERATIONS = 2000000
+TIME_STEP = 2e-7
+VACANCY_SEARCH_DISTANCE = 10
+
+INCLUDE_FILE = "Scene.initialization.mdl"
+
+PARTITION_X = [[-0.150999993085861 TO 0.150999993085861 STEP 0.0199999995529652]]
+PARTITION_Y = [[-0.150999993085861 TO 0.150999993085861 STEP 0.0199999995529652]]
+PARTITION_Z = [[-0.865317583084106 TO 0.0124999992549419 STEP 0.0199999995529652]]
+
+INCLUDE_FILE = "Scene.molecules.mdl"
+
+INCLUDE_FILE = "Scene.surface_classes.mdl"
+
+INCLUDE_FILE = "Scene.reactions.mdl"
+
+INCLUDE_FILE = "geo15d.mdl"
+
+INCLUDE_FILE = "Scene.mod_surf_regions.mdl"
+
+INCLUDE_FILE = "Scene.release_patterns.mdl"
+
+INSTANTIATE Scene OBJECT
+{
+  cleft OBJECT cleft {}
+  postsynaptic OBJECT postsynaptic {}
+  presynaptic OBJECT presynaptic {}
+  glutamate_rel RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0]
+   SITE_DIAMETER = .015
+   MOLECULE = glutamate
+   NUMBER_TO_RELEASE = 700
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = glut_pattern
+  }
+  A_rel RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[RFace]
+   MOLECULE = AMPAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+  N_rel RELEASE_SITE
+  {
+   SHAPE = Scene.postsynaptic[RFace]
+   MOLECULE = NMDAR'
+   NUMBER_TO_RELEASE = 20
+   RELEASE_PROBABILITY = 1
+  }
+  uptake RELEASE_SITE
+  {
+   SHAPE = Scene.presynaptic[reuptake]
+   MOLECULE = EEAT,
+   NUMBER_TO_RELEASE = 5000
+   RELEASE_PROBABILITY = 1
+  }
+  kyn_rel RELEASE_SITE
+  {
+   SHAPE = Scene.cleft
+   MOLECULE = kyn
+   NUMBER_TO_RELEASE = 0
+   RELEASE_PROBABILITY = 1
+  }
+  glutamate_rel2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0.05, -0.05, 0]
+   SITE_DIAMETER = .015
+   MOLECULE = glutamate
+   NUMBER_TO_RELEASE = 700
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = glut_pattern
+  }
+  glutamate_rel3 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [-0.05, 0.05, 0]
+   SITE_DIAMETER = .015
+   MOLECULE = glutamate
+   NUMBER_TO_RELEASE = 700
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = glut_pattern
+  }
+}
+
+sprintf(seed,"%05g",SEED)
+
+INCLUDE_FILE = "Scene.viz_output.mdl"
+
+INCLUDE_FILE = "Scene.rxn_output.mdl"
+

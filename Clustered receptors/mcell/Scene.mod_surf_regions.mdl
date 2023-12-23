@@ -1,0 +1,16 @@
+MODIFY_SURFACE_REGIONS
+{
+  cleft[ALL]
+  {
+    SURFACE_CLASS = transparent
+  }
+  glut_det1[ALL]
+  {
+    SURFACE_CLASS = transparent
+  }
+  glut_det2[ALL]
+  {
+    SURFACE_CLASS = transparent
+  }
+}
+

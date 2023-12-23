@@ -1,0 +1,8 @@
+MODIFY_SURFACE_REGIONS
+{
+  cleft[cleft]
+  {
+    SURFACE_CLASS = transparent_sc
+  }
+}
+
